@@ -13,17 +13,22 @@
 <p id="demo"></p>
 
 <script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = if(driver.getPageSource().contains("Send"))
-{
-alert("Hello! I am an alert box!!");
+
+var content = document.body.textContent || document.body.innerText;
+var hasText = content.indexOf("Send")!==-1;
+if (hasText) {
+    document.getElementById("show").style.display = 'block';
+} else {
+    document.getElementById("show").style.display = 'none';
 }
 
-else
-{
-alert("Hello! I am an box!!");
-};
 
+function myFunction() {
+  document.getElementById("demo").innerHTML = if (hasText) {
+    document.getElementById("show").style.display = 'block';
+} else {
+    document.getElementById("show").style.display = 'none';
+};
 }
 </script>
 
