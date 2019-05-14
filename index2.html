@@ -5,7 +5,6 @@
     <p>Send Message: <button id="message_button">Hi parent</button></p>
 
     <script>
-        // addEventListener support for IE8
         function bindEvent(element, eventName, eventHandler) {
             if (element.addEventListener) {
                 element.addEventListener(eventName, eventHandler, false);
@@ -13,17 +12,14 @@
                 element.attachEvent('on' + eventName, eventHandler);
             }
         }
-  // Send a message to the parent
         var sendMessage = function (msg) {
             // Make sure you are sending a string, and to stringify JSON
             window.parent.postMessage(msg, '*');
         };
         var results = document.getElementById('results'),
             messageButton = document.getElementById('message_button');
-        
-        // Send random message data on every button click
-        bindEvent(messageButton, 'click', function (e) {
-            
+
+        bindEvent(messageButton, 'click', function (e) {     
             sendMessage("Hi");
         });
     </script>
