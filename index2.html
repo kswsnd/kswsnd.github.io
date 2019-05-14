@@ -5,7 +5,7 @@
     <title>iframe Window</title>
     <style>
         body {
-            background-color: yellow;
+            background-color: green;
             color: white;
         }
     </style>
@@ -23,15 +23,11 @@
                 element.attachEvent('on' + eventName, eventHandler);
             }
         }
-        // Send a message to the parent
+  // Send a message to the parent
         var sendMessage = function (msg) {
             // Make sure you are sending a string, and to stringify JSON
             window.parent.postMessage(msg, '*');
         };
-<<<<<<< HEAD
-	
-=======
->>>>>>> parent of 42ab7dc... Update index2.html
         var results = document.getElementById('results'),
             messageButton = document.getElementById('message_button');
         
