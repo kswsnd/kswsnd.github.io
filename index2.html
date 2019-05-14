@@ -4,7 +4,6 @@
 
 <body>
 
-    <h1>Hello there, i'm an iframe</h1>
     <p>Send Message: <button id="message_button">Hi parent</button></p>
 
 
@@ -29,7 +28,7 @@
         // Send random message data on every button click
         bindEvent(messageButton, 'click', function (e) {
             var random = Math.random();
-            sendMessage('hallo' + random);
+            sendMessage('' + random + 'yahoodehallo');
         });
     </script>
 </body>
