@@ -8,5 +8,10 @@
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
 
+document.getElementById('my-btn').addEventListener('click', handleButtonClick, false);
+function handleButtonClick(e) {
+  window.parent.postMessage('iframe_message')
+}
+
 </body>
 </html>
