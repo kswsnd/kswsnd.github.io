@@ -2,35 +2,17 @@
 <html>
 <body>
 
-<iframe src="https://kswsnd.github.io/index2.html"></iframe>
+<p>Click the button to search a string for "W3Schools", and display the position of the match.</p>
 
-<h1>The onclick Event</h1>
-
-<p>The onclick event is used to trigger a function when an element is clicked on.</p>
-
-<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
-
-<button onclick="myFunction()">Click me</button>
+<button onclick="myFunction()">Try it</button>
 
 <p id="demo"></p>
 
 <script>
-
-var content = document.body.textContent || document.body.innerText;
-var hasText = content.indexOf("Send")!==-1;
-if (hasText) {
-    document.getElementById("show").style.display = 'block';
-} else {
-    document.getElementById("show").style.display = 'none';
-}
-
-
 function myFunction() {
-  document.getElementById("demo").innerHTML = if (hasText) {
-    document.getElementById("show").style.display = 'block';
-} else {
-    document.getElementById("show").style.display = 'none';
-};
+  var str = document.body.innerHTML; 
+  var n = str.search("button");
+  document.getElementById("demo").innerHTML = n;
 }
 </script>
 
