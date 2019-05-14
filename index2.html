@@ -33,14 +33,10 @@
         };
         var results = document.getElementById('results'),
             messageButton = document.getElementById('message_button');
-        // Listen to messages from parent window
-        bindEvent(window, 'message', function (e) {
-            results.innerHTML = e.data;
         });
         // Send random message data on every button click
         bindEvent(messageButton, 'click', function (e) {
-            var random = Math.random();
-            sendMessage('' + random);
+                        sendMessage("grus);
         });
     </script>
 </body>
