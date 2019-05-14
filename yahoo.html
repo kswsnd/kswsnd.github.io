@@ -1,36 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>iframe Window</title>
-    <style>
-        body {
-            background-color: red;
-            color: white;
-        }
-    </style>
-</head>
+<html>
 <body>
 
+<h1>The onclick Event</h1>
 
-    <p>Send Message: <button id="message_button">Confirm Selection</button></p>
+<p>The onclick event is used to trigger a function when an element is clicked on.</p>
 
+<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
 
-<script type="text/javascript">
+<button onclick="myFunction()">Click me</button>
 
-<iframe src="https://kswsnd.github.io/index2"></iframe>
+<p id="demo"></p>
 
-if(driver.getPageSource().contains("Send"))
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = if(driver.getPageSource().contains("Send"))
 {
 alert("Hello! I am an alert box!!");
 }
 
 else
 {
-alert("Hello! I am an alert box!!");
+alert("Hello! I am an box!!");
+};
+
 }
-
-
 </script>
+
 </body>
 </html>
